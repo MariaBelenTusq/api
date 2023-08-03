@@ -1,4 +1,2 @@
 # Pokemon-Poke-API
-Consumindo "API do Pokemon" - https://pokeapi.co/api/v2/, durante o desenvolvimento deste projeto foram utilizadas as seguintes tecnologias: HTML, CSS e Javascript puro.
-
-https://pokemon-poke-api.vercel.app/
+![image](https://github.com/MariaBelenTusq/api/assets/113404887/a7e0d75a-be57-45aa-8046-893508c12d74)
