@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/normalize.css" />
+    <link rel="stylesheet" href="css/main.css" />
+    <title>POKE API</title>
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="container">
+        <div id="dialog"></div>
+        <div id="overlay"></div>
+        <header class="header-page">
+          <nav class="header-page__nav"></nav>
+        </header>
+
+        <div class="bar-search">
+          <input
+            type="text"
+            placeholder="Buscar por nombre o pokeId"
+            class="bar-search__input"
+          />
+        </div>
+
+        <div class="bar-filter-by-type"></div>
+
+        <div class="bar-filter-advanced">
+          <div></div>
+          <form>
+            <p>
+              <label>
+                Mostrar de:
+                <input type="text" value="1" name="" id="fromNumber" />
+              </label>
+            </p>
+            <p>
+              <label>
+                Hasta: <input type="text" value="20" name="" id="toNumber" />
+              </label>
+            </p>
+            <button class="btn btn-load">OK</button>
+          </form>
+        </div>
+        <div class="content"></div>
+      </div>
+      <footer class="footer-page">
+        <p>realizado por Tusq Maria Belen</p>
+      </footer>
+    </div>
+  </body>
+  <script src="./js/main.js"></script>
+</html>

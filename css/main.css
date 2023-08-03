@@ -1,0 +1,331 @@
+@font-face {
+    font-family: 'pokemon';
+    src: url('../css/Pokemon\ Hollow.ttf');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'pokemon-solid';
+    src: url('../css/Pokemon\ Solid.ttf');
+    font-weight: normal;
+    font-style: normal;
+}
+
+* {
+    border: none;
+    box-sizing: border-box;
+    font-family: 'pokemon-solid';
+    letter-spacing: 0.2em;
+    list-style: none;
+    outline: none;
+}
+
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    width: 100%;
+}
+
+img {
+    width: 100%;
+}
+
+.wrapper {
+    min-height: 100%;
+    position: relative;
+}
+
+.container {
+    padding-bottom: 100px;
+    position: relative;
+}
+
+.header-page {
+    background: url(../img/pokemon-logo.png) no-repeat center center /60vh;
+    border-bottom: 50px solid #893737;
+    box-sizing: initial;
+    height: 150px;
+    width: 100%;
+}
+
+.bar-search {
+    align-items: center;
+    border-radius: 3px;
+    display: flex;
+    height: 70px;
+    justify-content: center;
+    margin: 0px auto;
+    position: relative;
+    top: -80px;
+}
+
+.bar-search__input {
+    background: rgb(224, 201, 119)))
+    border: 3px solid rgb(48, 107, 178);
+    border-radius: 6px;
+    height: 40px;
+    text-indent: 5px;
+    width: 100%;
+}
+
+.bar-filter-by-type {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 5px auto;
+    width: 80vw;
+}
+
+.bar-filter-by-type span {
+    background: rgb(228, 203, 113);
+    border-radius: 3px;
+    box-shadow: 1px 2px 5px #ccc;
+    color: black;
+    cursor: pointer;
+    font-size: 0.7em;
+    font-weight: 400;
+    margin: 5px;
+    padding: 3px 5px 3px 5px;
+    width: auto;
+}
+
+.active {
+    border: 2px solid rgb(87, 87, 194);
+}
+
+.bar-filter-advanced {
+    align-items: center;
+    background: rgb(250, 250, 250);
+    box-shadow: 0px 1px 5px 0px #ccc;
+    display: flex;
+    justify-content: space-between;
+    margin: 5px auto;
+    width: 80vw;
+}
+
+.bar-filter-advanced div {
+    align-self: center;
+    margin-left: 30px;
+}
+
+.bar-filter-advanced form {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    margin-right: 30px;
+    width: auto;
+}
+
+.bar-filter-advanced form p {
+    font-size: 0.9em;
+}
+
+.bar-filter-advanced form input {
+    margin-right: 10px;
+    background: rgb(149, 70, 70);
+    box-shadow: 1px 2px 5px #ccc;
+    padding: 0px 5px;
+    text-align: center;
+    width: 50px;
+}
+
+.btn {
+    background: rgb(181, 159, 80);
+    border: none;
+    box-shadow: 1px 2px 5px #ccc;
+    color: #fff;
+    cursor: pointer;
+    font-size: 0.8em;
+    text-align: center;
+}
+
+.content {
+    background: rgb(250, 250, 250);
+    box-shadow: 0px 2px 5px 0px #ccc;
+    display: flex;
+    height: auto;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 0 auto;
+    padding: 30px 0 30px;
+    width: 80vw;
+}
+
+.card {
+    align-items: center;
+    position: relative;
+    border-radius: 3px;
+    box-shadow: 0px 2px 5px 0px #ccc;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    justify-content: space-between;
+    margin: 5px;
+    min-width: 200px;
+}
+
+.card-img {
+    width: 150px;
+}
+
+.card__poke-id {
+    align-items: center;
+    align-self: flex-end;
+    color: #fff;
+    display: flex;
+    font-weight: 900;
+    justify-content: center;
+    margin: 10px;
+    padding: 5px;
+}
+
+.card__info {
+    background: rgba(0, 0, 0, 0.767);
+    box-shadow: 1px 2px 5px #ccc;
+    border-radius: 3px;
+    display: none;
+    height: 100%;
+    min-width: 200px;
+    position: absolute;
+    transition: 2s all ease-in-out;
+    z-index: 1;
+}
+
+.card__info ul {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    justify-content: center;
+    list-style: none;
+    padding: 0px;
+    width: 100%;
+}
+
+.card__info ul li {
+    color: rgb(250, 250, 250);
+    font-weight: 900;
+    text-align: center;
+}
+
+.card__info ul li:last-child {
+    background: rgb(48, 107, 178);
+    border: 5px solid rgb(48, 107, 178);
+    box-sizing: border-box;
+    color: #fff;
+    margin-top: 50px;
+    text-align: center;
+    width: 100%;
+}
+
+.card:hover>.card__info {
+    display: block;
+    height: 100%;
+    z-index: 1;
+}
+
+.card-name {
+    background: rgb(240, 240, 240);
+    border-bottom-left-radius: 3px;
+    border-bottom-right-radius: 3px;
+    width: 100%;
+}
+
+.card-name p {
+    color: #fff;
+    font-weight: 700;
+    text-align: center;
+    text-transform: capitalize;
+}
+
+.card-info div {
+    display: flex;
+    flex-direction: row;
+}
+
+.card-info span {
+    background: rgb(230, 190, 45);
+    border-radius: 3px;
+    color: black;
+    cursor: pointer;
+    font-size: 0.7em;
+    font-weight: 400;
+    margin: 50px 5px;
+    padding: 3px 5px 3px 5px;
+    width: auto;
+}
+
+.footer-page {
+    align-items: center;
+    background: #000;
+    bottom: 0;
+    border-top: 20px solid #4c4c4c;
+    box-sizing: content-box;
+    display: flex;
+    color: #fff;
+    height: 50px;
+    justify-content: center;
+    left: 0;
+    position: absolute;
+    text-align: center;
+    width: 100%;
+}
+
+@media (min-width: 0px) and (max-width: 700px) {
+    .bar-search {
+        width: 90vw;
+    }
+}
+
+@media (min-width: 700px) and (max-width: 1000px) {
+    .bar-search {
+        width: 60vw;
+    }
+}
+
+@media (min-width: 1000px) {
+    .bar-search {
+        width: 40vw;
+    }
+}
+
+#dialog {
+    background: #fff;
+    border-radius: 3px;
+    left: 50%;
+    margin-right: -50%;
+    position: absolute;
+    -webkit-transform: translate(-50%, 50%);
+    transform: translate(-50%, 50%);
+    min-width: 20vw;
+    z-index: 900;
+}
+
+#overlay {
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.425);
+    position: absolute;
+    display: none;
+    z-index: 1;
+}
+
+.card-info {
+    align-items: center;
+    position: relative;
+    border-radius: 3px;
+    box-shadow: 0px 2px 5px 0px #ccc;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    margin: 5px;
+    min-width: 200px;
+}
+
